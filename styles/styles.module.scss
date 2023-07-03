@@ -1,0 +1,101 @@
+$heightTop: 50px;
+
+.container {
+  background-color: rgb(172, 240, 172);
+  min-height: 100vh;
+  text-align: center;
+  font-size: 16px;
+  .content {
+    padding-top: 50px;
+    // padding: 0 50px;
+    .top {
+      padding: 40px 20px 20px;
+      display: flex;
+      justify-content: center;
+
+      .wrapInput {
+        width: fit-content;
+        border: 1px solid #000;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+
+        input {
+          padding-left: 16px;
+          padding-right: 4px;
+          border: unset;
+          width: 500px;
+          height: $heightTop;
+          font-size: 24px;
+          &:hover,
+          &:active,
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            font-style: normal;
+          }
+        }
+
+        .btnX {
+          padding: 0 20px;
+          height: 100%;
+          background-color: #dad8d8;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .btnSend {
+        margin-left: 20px;
+        padding: 0 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        border: unset;
+        background-color: rgb(238, 144, 21);
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .wrapList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      .wrapItem {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        p {
+          font-weight: 700;
+        }
+        @media only screen and (max-width: 1024px) {
+          width: 300px;
+          img {
+            width: 300px;
+            height: 300px;
+          }
+        }
+        @media only screen and (max-width: 500px) {
+          width: 250px;
+          img {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+    }
+    .wrapPagination {
+      background-color: rgb(172, 240, 172);
+      width: 100%;
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
